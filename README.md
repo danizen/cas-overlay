@@ -1,15 +1,16 @@
-CAS Gradle Overlay
+CAS Overlay
 ============================
-Generic CAS gradle war overlay to exercise the latest versions of CAS. This overlay could be freely used as a starting template for local
-CAS gradle war overlays.
 
-## Versions
+An overlay of Jasig CAS, built using Gradle on top of CAS 4.2.7
 
-* CAS 4.2.x
+## Version
+
+* CAS 4.2.7
 
 ## Requirements
 
-* JDK 1.7+
+* JDK (currently 1.8)
+* SDKMAN with Gradle (currently 3.3)
 
 ## Configuration
 
@@ -36,13 +37,13 @@ Study material:
 ## Build
 
 ```bash
-./gradlew[.bat] clean build
+gradle clean build
 ```
 
 To produce an exploded war directory (convenient during development, etc.)
 
 ```bash
-./gradlew[.bat] clean build explodeWar
+gradle clean build explodeWar
 ```
 
 ## Deployment
@@ -63,7 +64,7 @@ jettySslKeyStorePassword=changeit
 Then run:
 
 ```bash
-./gradlew[.bat] clean build jettyRunWar
+gradle clean build jettyRunWar
 ```
 
 CAS will be available at:
